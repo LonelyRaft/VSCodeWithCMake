@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "build",
+			"dependsOn": "config",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"./build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "build binary file"
+		},
+		{
+			"type": "cppbuild",
+			"label": "config",
+			"command": "cmake",
+			"args": [
+				"-S",
+				"./",
+				"-B",
+				"build",
+				"-G",
+				"MinGW Makefiles"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "config compile file"
+		}
+	]
+}
