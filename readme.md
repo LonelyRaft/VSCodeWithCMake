@@ -1,4 +1,4 @@
-# VSCode+CMake For Windows
+# VSCode+CMake
 
 1. set ${PROJECT_NAME} in `CMakeLists.txt`
 
